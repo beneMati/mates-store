@@ -1,0 +1,11 @@
+{
+  "name": "mates-store-backend",
+  "version": "1.0.0",
+  "description": "Backend of mates store",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matias Benedetto",
+  "license": "ISC"
+}
