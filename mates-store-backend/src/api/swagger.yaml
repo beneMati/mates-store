@@ -1,0 +1,47 @@
+openapi: 3.0.0
+info:
+  title: Mates Store Docs
+  version: 1.0.0
+paths:
+  /categories:
+    get:
+      x-swagger-router-controller: categories
+      summary: Get All Categories
+      operationId: getCategories
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Categories"
+    post:
+      x-swagger-router-controller: categories
+      summary: Create A Category
+      operationId: createCategory
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Categories"
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Bad request. Category ID must be an integer and larger than 0.
+        "500":
+          description: Unexpected error.
+components:
+  schemas:
+    Categories:
+      type: object
+      properties:
+        categoryId:
+          type: integer
+          format: int64
+          example: 4
+        categoryDescription:
+          type: string
+          example: Mates
