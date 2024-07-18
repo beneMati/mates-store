@@ -11,7 +11,6 @@ module.exports = [
 			eqeqeq: "error",
 			"no-console": "warn",
 			"handle-callback-err": "error",
-			"arrow-body-style": "error",
 			"no-var": "error",
 		},
 	},
